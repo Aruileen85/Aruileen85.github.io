@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*-------
+Correction de la barre d'en-tête pour un user connecté
+-------*/
+.admin-bar nav {
+    margin-top: 32px;
+}
+
+.pagination {
+  justify-content: center;
+}
