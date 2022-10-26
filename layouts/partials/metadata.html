@@ -1,0 +1,18 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Le 02 Jan 2006 à 15:04" }}
+  <i data-feather="calendar"></i>&nbsp;<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+  {{ with .Params.tags }}
+    &nbsp;&nbsp;&nbsp;<i data-feather="tag"></i>
+    {{ range . }}
+      {{ $href := print (absURL "tags/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-warning tag-btn" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+  {{ end }} 
+  {{ with .Params.categories }}
+    &nbsp;&nbsp;&nbsp;<i data-feather="bookmark"></i>
+    {{ range . }}
+      {{ $href := print (absURL "categories/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-success tag-btn" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+  &nbsp;&nbsp;&nbsp;<i data-feather="user"></i>&nbsp;{{ .Param "author" }}

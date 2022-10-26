@@ -1,0 +1,17 @@
+{{ $align := "my-2" }}
+{{ $width := "150" }}
+
+{{ if eq (.Get "align") "center" }}
+  {{ $align = "mx-auto d-block my-2" }}
+{{ else if eq (.Get "align") "left" }}
+  {{ $align = "float-start me-4" }}
+{{ else if eq (.Get "align") "right" }}
+  {{ $align = "float-end ms-4" }}
+{{ end }}
+
+{{ if isset .Params "size" }}
+  {{ $width = .Get "size"}}
+{{ end }}
+
+<img src="{{ .Get "src" }}" alt="{{ .Get "src" }}" class="{{ $align }}" width="{{ $width }}">
+

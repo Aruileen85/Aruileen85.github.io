@@ -1,0 +1,29 @@
+baseURL = 'https://aruileen.fr/'
+languageCode = 'fr-fr'
+title = 'Aurélien S.'
+timeZone = 'Europe/Paris'
+dateFormat = "02 Jan 2006"
+dateFormatFull = "02/01/2006"
+dateFormatTime = "02 Jan 2006 15:04"
+enableGitInfo = true
+paginate = 10
+[menu]
+  [[menu.main]]
+    name = "Accueil"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Curriculum Vitæ"
+    url = "/cv"
+    weight = 2
+  [[menu.main]]
+    name = "Articles"
+    url = "/articles/"
+    weight = 3
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2
+    ordered = true
+

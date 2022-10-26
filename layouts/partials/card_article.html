@@ -1,0 +1,11 @@
+<div class="card bg-light mb-3">
+  <div class="card-header"><h1>{{ .Title }}</h1></div>
+  <div class="card-body">
+    <p class="card-text">
+    {{ .Content }}
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    {{ partial "metadata.html" . }}
+  </div>
+</div>

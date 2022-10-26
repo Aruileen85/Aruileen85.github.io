@@ -1,0 +1,25 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range .Paginator.Pages.ByPublishDate.Reverse }}
+<p>
+    
+    <p></p>
+</p>
+
+
+<div class="card bg-light mb-3">
+  <div class="card-header"><h2><a href="{{ .RelPermalink }}" class="text-reset text-decoration-none">{{ .Title }}</a></h2></div>
+  <div class="card-body">
+    <p class="card-text">
+      {{ .Summary }}&nbsp;&nbsp;<a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Lire la suite...</a>
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    {{ partial "metadata.html" . }}
+  </div>
+</div>
+{{ end }}
+  <div class="text-center ">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+{{ end }}

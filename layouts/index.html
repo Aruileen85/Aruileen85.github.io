@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="px-4 py-5 text-center">
+	<h1 class="display-5 fw-bold">{{.Title}}</h1>
+	{{.Content}}
+</div>
+
+{{ range .Site.Data.cv.diplomas.title }}
+	{{ . }}
+{{ end }}
+
+{{ end }}
