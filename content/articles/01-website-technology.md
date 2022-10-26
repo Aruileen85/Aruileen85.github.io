@@ -9,7 +9,7 @@ tags:
 categories: 
   - Web Development
 toc: true
-draft: true
+draft: false 
 ---
 ## Design avec bootstrap
 {{< img-thumb src="/medias/bootstrap.svg" align="left" size="100" >}}
