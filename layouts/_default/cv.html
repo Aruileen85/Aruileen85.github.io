@@ -20,9 +20,9 @@
 			{{ range .Site.Data.cv.diplomas }}
 			<div class="col-md-6 mb-4">
 				<div class="card mb-4 text-center h-100">
+          <div class="card-header"><h4>{{ .title }}</h4></div>
 					<img src="{{ .image }}" class="card-img-top w-25 align-self-center m-3" alt="{{ .title }}">
 					<div class="card-body">
-						<h5 class="card-title">{{ .title }}</h5>
 						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
 						<p class="card-text">{{ .description }}</p>
 						<p class="card-text text-muted">{{ .mention }}</p>
@@ -41,9 +41,9 @@
 			{{ range .Site.Data.cv.professional }}
 			<div class="col-lg-4 mb-4">
 				<div class="card text-center h-100">
+          <div class="card-header"><h4>{{.title }}</h4></div>
 					<img src="{{ .image }}" class="card-img-top align-self-center p-3" alt="{{ .location }}">
 					<div class="card-body">
-						<h5 class="card-title">{{.title }}</h5>
 						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
 						<p class="card-text">{{ .description }}</p>
 					</div>
@@ -61,8 +61,8 @@
 			{{ range .Site.Data.cv.personnal }}
 			<div class="col-md-6 mb-4">
 				<div class="card mb-4 text-center h-100">
+          <div class="card-header"><h4>{{ .title }}</h4></div>
 					<div class="card-body">
-						<h5 class="card-title">{{ .title }}</h5>
 						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
 						<p class="card-text">{{ .description}} </p>
 					</div>

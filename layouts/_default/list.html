@@ -7,14 +7,14 @@
 </p>
 
 
-<div class="card bg-light mb-3">
+<div class="card border-dark mb-3">
   <div class="card-header"><h2><a href="{{ .RelPermalink }}" class="text-reset text-decoration-none">{{ .Title }}</a></h2></div>
   <div class="card-body">
     <p class="card-text">
       {{ .Summary }}&nbsp;&nbsp;<a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Lire la suite...</a>
     </p>
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer">
     {{ partial "metadata.html" . }}
   </div>
 </div>
