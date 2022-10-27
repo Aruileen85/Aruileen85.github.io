@@ -31,7 +31,7 @@ C'est un simple résumé mais prochainement je publierai un "mémo" qui sera un 
 
 ## Ressources
 ### Découvrir Hugo
- [{{< img-thumb src="/medias/01-website-technologies/markdown.png" size="500" >}}](/medias/01-website-technologies/markdown.png)
+ [{{< img-thumb src="/medias/01-website-technologies/markdown.png" size="100%" >}}](/medias/01-website-technologies/markdown.png)
  {{< youtube xMv10E561WQ >}}
 
 ### Sites Officiels
