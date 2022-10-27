@@ -11,7 +11,7 @@ categories:
 toc: true
 draft: false 
 ---
-Le développement de ce site a pris quelque temps, et s'est déroulé en plusieures étapes à mesure que je progressai dans mes connaissances informatique. Le thème fut réalisé et codé en 2021 dans le court laps de temps séparant mes deux précédentes affectations professionnelles, et s'est vu appliqué dans un premier temps à un site codé en PHP par mes soins. Prenant conscience de l'inutilité de réinventer la roue, et n'ayant plus le temps de coder mon site web, je l'ai adapté à [Wordpress](https://fr.wordpress.org/). Cette solution ne m'a que peu convaincu, le {{<abbr "CMS" "Content Management System, faisant référence ici à Wordpress" >}} étant très lourd. Enfin, j'ai découvert par hasard [Hugo](https://gohugo.io/), un "logiciel" permettant de générer un site statique.
+Le développement de ce site a pris quelque temps, et s'est déroulé en plusieures étapes à mesure que je progressai dans mes connaissances informatique. Le thème fut réalisé et codé en 2021 dans le court laps de temps séparant mes deux précédentes affectations professionnelles, et s'est vu appliqué dans un premier temps à un site codé en PHP par mes soins.<!--more--> Prenant conscience de l'inutilité de réinventer la roue, et n'ayant plus le temps de coder mon site web, je l'ai adapté à [Wordpress](https://fr.wordpress.org/). Cette solution ne m'a que peu convaincu, le {{<abbr "CMS" "Content Management System, faisant référence ici à Wordpress" >}} étant très lourd. Enfin, j'ai découvert par hasard [Hugo](https://gohugo.io/), un "logiciel" permettant de générer un site statique.
 
 ## Design avec bootstrap
 {{< img-thumb src="/medias/bootstrap.svg" align="left" size="100" >}}
