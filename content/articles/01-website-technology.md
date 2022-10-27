@@ -1,5 +1,5 @@
 ---
-title: "Quelle technologie pour mon site web ?"
+title: "Quelles technologies pour mon site web ?"
 date: 2022-10-25T14:24:49+02:00
 author: "Aurélien Schnoebelen"
 tags: 
