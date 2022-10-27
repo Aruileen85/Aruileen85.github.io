@@ -15,7 +15,7 @@ Le développement de ce site a pris quelque temps, et s'est déroulé en plusieu
 
 ## Design avec bootstrap
 {{< img-thumb src="/medias/bootstrap.svg" align="left" size="100" >}}
-Il ne m'a pas fallu longtemps pour choisir mon framework. Concernant la mise en page des sites internet, [Bootstrap](https://getbootstrap.com/) est sans aucun doute l'un des plus connus. Sa documentation foisonnante et ses nombreux tutoriels rendent sont apprentissage extrèmement aisé et rapide, et en font un outil puissant pour créer une structure cohérente et responsive. Bien que je me soit contenté d'utiliser un thème graphique fourni par l'éditeur [Bootswatch](https://bootswatch.com/) dans un soucis de gain de temps, les possibilités qui nous sont offertes n'ont pour seules limites l'imagination.
+Il ne m'a pas fallu longtemps pour choisir mon framework. Concernant la mise en page des sites internet, [Bootstrap](https://getbootstrap.com/) est sans aucun doute l'un des plus connus. Sa documentation foisonnante et ses nombreux tutoriels rendent sont apprentissage extrèmement aisé et rapide, et en font un outil puissant pour créer une structure cohérente et responsive. Bien que je me soit contenté d'utiliser un thème graphique fourni par l'éditeur [Bootswatch](https://bootswatch.com/) (thème de couleur, style des boutons...)  dans un soucis de gain de temps, les possibilités qui nous sont offertes n'ont pour seules limites l'imagination.
 
 ## Des débuts sous wordpress...
 {{< img-thumb src="/medias/wordpress.svg" align="right" size="100" >}}

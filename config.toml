@@ -9,17 +9,36 @@ enableGitInfo = true
 paginate = 10
 [menu]
   [[menu.main]]
+    identifier = "accueil"
     name = "Accueil"
-    url = "/"
+    pageref = "/"
     weight = 1
   [[menu.main]]
+    identifier = "cv"
     name = "Curriculum Vitæ"
-    url = "/cv"
+    pageref = "/cv"
     weight = 2
   [[menu.main]]
+    identifier = "articles"
     name = "Articles"
-    url = "/articles/"
+    pageref = "/articles"
     weight = 3
+  [[menu.main]]
+    identifier = "dev"
+    name = "Dev & Stats"
+    weight = 4
+  [[menu.main]]
+    identifier = "todo"
+    name = "To-do list"
+    pageref = "/pages/todo-list"
+    weight = 1
+    parent = "dev"
+  [[menu.main]]
+    identifier = "updates"
+    name = "Updates"
+    pageref = "/pages/updates"
+    weight = 2
+    parent = "dev"
 
 [markup]
   [markup.tableOfContents]

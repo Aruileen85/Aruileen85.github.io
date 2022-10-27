@@ -9,15 +9,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {{ range .Site.Menus.main }}
-        <li class="nav-item">	
-          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-          {{ $active = or $active (eq .Name $current.Title) }}
-          {{ $active = or $active (and (eq .Name "Articles") (eq $current.Section "articles")) }}
-          <a class="nav-link {{ if $active }}active{{ end }}" href="{{ .URL }}">
-            {{ $text := print .Name | safeHTML }}
-            {{ $text }}
-          </a>
-        </li>
+          {{ if .HasChildren }}
+            <li class="nav-item dropdown">	
+              <a class="nav-link dropdown-toggle {{ if $current.HasMenuCurrent "main" . }}active{{ end }}" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{ .URL }}">
+                {{ $text := print .Name | safeHTML }}
+                {{ $text }}
+              </a>
+              <div class="dropdown-menu">
+                {{ range .Children }}
+                <a class="dropdown-item {{ if $current.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+                {{ end }}
+              </div>
+            </li>
+          {{ else }}
+            <li class="nav-item">	
+              <a class="nav-link {{ if $current.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+                {{ $text := print .Name | safeHTML }}
+                {{ $text }}
+              </a>
+            </li>
+          {{ end }}
         {{ end }}
       </ul>
       <!--<form class="d-flex">
