@@ -1,5 +1,5 @@
 <ol  class="breadcrumb">
-  <i data-feather="terminal"></i>&nbsp;&nbsp;&nbsp;{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+  <li class="breadcrumb-item"><i class="fa-solid fa-terminal"></i></li>{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
 </ol>
 {{ define "breadcrumbnav" }}
 {{ if .p1.Parent }}

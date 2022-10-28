@@ -45,4 +45,6 @@ paginate = 10
     endLevel = 3
     startLevel = 2
     ordered = true
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
 
