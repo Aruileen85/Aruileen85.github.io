@@ -39,6 +39,12 @@ paginate = 10
     pageref = "/pages/updates"
     weight = 2
     parent = "dev"
+  [[menu.main]]
+    identifier = "shortcodes"
+    name = "Shortcodes"
+    pageref = "/pages/shortcodes"
+    weight = 3
+    parent = "dev"
 
 [markup]
   [markup.tableOfContents]
