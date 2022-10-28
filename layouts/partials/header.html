@@ -25,7 +25,7 @@
             </li>
           {{ else }}
             <li class="nav-item">	
-              <a class="nav-link {{ if $current.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+              <a class="nav-link {{ if $current.IsMenuCurrent "main" . }}active{{ end }} {{ if $current.HasMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
                 {{ $text := print .Name | safeHTML }}
                 {{ $text }}
               </a>
