@@ -28,14 +28,8 @@ paginate = 10
     name = "Dev & Stats"
     weight = 4
   [[menu.main]]
-    identifier = "todo"
-    name = "To-do list"
-    pageref = "/pages/todo-list"
-    weight = 1
-    parent = "dev"
-  [[menu.main]]
     identifier = "updates"
-    name = "Updates"
+    name = "Updates & Infos"
     pageref = "/pages/updates"
     weight = 2
     parent = "dev"
@@ -51,6 +45,19 @@ paginate = 10
     endLevel = 3
     startLevel = 2
     ordered = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
 [outputs]
     home = ["HTML", "RSS", "JSON"]
-

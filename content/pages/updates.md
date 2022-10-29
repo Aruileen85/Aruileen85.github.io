@@ -1,13 +1,31 @@
 ---
-title: "Updates"
+title: "Mises à jour & Informations techniques"
 date: 2022-10-27T19:03:07+02:00
 author: "Aurélien Schnoebelen"
 layout: "page"
 toc: false
 draft: false 
 ---
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+{{< img-thumb src="/medias/todo-list/cover.jpg"  size="100%" >}}
+## Todo List
+### Prochaine version
+  - Formulaire de contact
+  - API maison pour la gestion des envois de mail
+    - _Le but est de pouvoir s'affranchir d'un service tiers, et de gérer de bout en bout les envois de mail._
 
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+### Prévisions futures
+  - API maison pour la gestion des commentaires utilisateurs
+    - _Le but est de pouvoir s'affranchir d'un service tiers, et de gérer de bout en bout les commentaires utilisateurs._
+  - Refonte graphique de la page d'accueil
+    - _Remise au goût du jour avec une interface plus élégante et dynamique._
 
-Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+## Informations techniques
+{{< git >}} 
+
+## Version 0.9 du 29/10/2022 {{< pill "Nouveau !" "warning" >}}
+  - Site version bêta, première version complète !
+  - Accueil, pages et articles fonctionnels.
+  - CV fonctionnel et en ligne
+  - Moteur de recherche
+  - Système de commentaires sur les articles.
+

@@ -11,7 +11,7 @@ toc: false
 draft: false
 ---
 ## Revenir au dernier commit réalisé
-{{< highlight shell >}}
+{{< highlight "" >}}
 git reset --hard
 git clean -fd
 {{< /highlight >}}
