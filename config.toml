@@ -6,7 +6,6 @@ dateFormat = "02 Jan 2006"
 dateFormatFull = "02/01/2006"
 dateFormatTime = "02 Jan 2006 15:04"
 enableGitInfo = true
-googleAnalytics = 'G-4M6W8DM7PN'
 paginate = 10
 [menu]
   [[menu.main]]
