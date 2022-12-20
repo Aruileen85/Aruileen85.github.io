@@ -20,9 +20,6 @@ draft: false
   - Refonte graphique de la page d'accueil
     - _Remise au goût du jour avec une interface plus élégante et dynamique._
 
-## Informations techniques
-{{< git >}} 
-
 ## Version 0.9 du 29/10/2022 {{< pill "Nouveau !" "warning" >}}
   - Site version bêta, première version complète !
   - Accueil, pages et articles fonctionnels.

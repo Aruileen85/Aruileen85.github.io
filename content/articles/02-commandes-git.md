@@ -10,6 +10,7 @@ categories:
 toc: false
 draft: false
 ---
+Petit aide mémoire sur quelques commandes GIT utiles... <!--more-->
 ## Revenir au dernier commit réalisé
 {{< highlight "" >}}
 git reset --hard
