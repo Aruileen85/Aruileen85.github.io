@@ -3,8 +3,7 @@
     <div class="container-fluid">
       <img src="/img/logo.svg" width="30" height="40" class="d-inline-block align-top mx-3" alt="">
       <a class="navbar-brand" href="/">Aurélien S.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       {{ $current := . }}
@@ -13,14 +12,13 @@
           {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ if $current.HasMenuCurrent " main" . }}active{{ end }}"
-              data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{ .URL }}">
+            <a class='nav-link dropdown-toggle {{ if $current.HasMenuCurrent "main" . }}active{{ end }}' data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{ .URL }}">
               {{ $text := print .Name | safeHTML }}
               {{ $text }}
             </a>
             <div class="dropdown-menu">
               {{ range .Children }}
-              <a class="dropdown-item {{ if $current.IsMenuCurrent " main" . }}active{{ end }}" href="{{ .URL }}">
+              <a class='dropdown-item {{ if $current.IsMenuCurrent "main" . }}active{{ end }}' href="{{ .URL }}">
                 {{ .Name }}
               </a>
               {{ end }}
@@ -28,8 +26,7 @@
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link {{ if $current.IsMenuCurrent " main" . }}active{{ end }} {{ if
-              $current.HasMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+            <a class='nav-link {{ if $current.IsMenuCurrent "main" . }}active{{ end }} {{ if $current.HasMenuCurrent "main" . }}active{{ end }}' href="{{ .URL }}">
               {{ $text := print .Name | safeHTML }}
               {{ $text }}
             </a>
