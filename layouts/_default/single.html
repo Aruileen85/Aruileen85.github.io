@@ -1,35 +1,35 @@
 {{ define "main" }}
-{{ if and (gt .WordCount 100 ) (.Params.toc) }}
-<div class="row">
-  <div class="col-xl-2 mb-3">
-    <div class="accordion" id="toc">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Table des matières
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#toc">
-          <div class="accordion-body">
-            {{ .TableOfContents }}
-          </div>
+<div class="container mt-5 pt-5">
+    {{ partial "breadcrumb.html" . }}
+    {{ if and (gt .WordCount 100 ) (.Params.toc) }}
+    <div class="row">
+        <div class="col-xl-2 mb-3">
+            <div class="accordion" id="toc">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Table des matières
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#toc">
+                        <div class="accordion-body">
+                            {{ .TableOfContents }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="col-xl-10">
+            {{ partial "card_article.html" . }}
+        </div>
     </div>
-  </div>
-  <div class="col-xl-10">
+    {{ else }}
     {{ partial "card_article.html" . }}
-  </div>
+    {{ end }}
+    <script src="https://utteranc.es/client.js" repo="Aruileen85/Aruileen85.github.io" issue-term="pathname"
+        label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
 </div>
-{{ else }}
-{{ partial "card_article.html" . }}
-{{ end }}
-<script src="https://utteranc.es/client.js"
-        repo="Aruileen85/Aruileen85.github.io"
-        issue-term="pathname"
-        label="Comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
 {{ end }}

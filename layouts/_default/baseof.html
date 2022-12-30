@@ -3,10 +3,8 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
-        <div class="container mt-5 pt-5">
-          {{ partial "breadcrumb.html" . }}
-	        {{- block "main" . }}{{- end }}
-        </div>
+          
+	    {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
 	{{- partial "script.html" . -}}
     </body>

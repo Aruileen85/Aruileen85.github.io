@@ -1,3 +1,5 @@
 qualities = ["Autonome", "Rigoureux", "Apprends vite"]
 defaults = ["Caractère vif", "Perfectionniste", "Nerveux"]
-competences = ["Linux", "Windows", "OS X", "HTML5", "CSS3", "php", "Python", "Pack Office", "Dépannage Informatique", "Suite Affinity", "Formation Scientifique", "Englais parlé et écrit", "Mécanique"]
+it_competences = ["Linux", "Windows", "OS X", "HTML5", "CSS3", "php", "Python", "Pack Office", "Dépannage Informatique", "Suite Affinity"]
+others_competences = ["Anglais parlé et écrit", "Formation Scientifique", "Mécanique"]
+learning = ["Allemand", "Arabe"]

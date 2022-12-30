@@ -1,4 +1,6 @@
 name = "Aurélien Schnoebelen"
-desc = "Mécanicien Engins de Manutention chez SODEM Manutention (La Roche Sur Yon)"
+desc = "Assistant Ingénieur"
 location = "Habite Rochetrejoux (85510)"
 'about' = "L’informatique… Tombé dans cette passion dès mon plus jeune âge (quand vers 11 ans mes camarades découvraient les jeux vidéos et internet, je développais mon premier site web en HTML4 et PHP !), ces 20 dernières années auront été chargées d’expériences variées avec le numérique… Linux, Mac OS, Windows sous toutes ses formes, j’ai appris à connaître et à bien maîtriser tous ces systèmes d’exploitation. Féru de code, j’ai appris les langages Python, html5, CSS3, Bootstrap, PHP, LabVIEW et possède quelques bases en java, C++. Technicien Motoriste de formation et de carrière, j’ai travaillé au centre technique de Renault Lardy, puis à l’Ecole Centrale de Nantes sur banc d’essais moteur. L’informatique ayant une place prépondérante dans le monde de la recherche et des essais, j’ai pu mettre à profit ma passion dans le cadre professionnel en développant des applications de pilotage/acquisition, mais aussi des scripts pour automatiser certaines tâches (comme automatiser l’envoi de mail, les traitement des résultats d’essais…).Travaillant aujourd’hui comme mécanicien suit à la crise financière ayant conduit les entreprises du monde de l’automobile à revoir à la baisse leurs projets de recherche, je souhaite reprendre une carrière dans le monde de l’informatique."
+status_color = "danger"
+status = "En recherche d'emploi"

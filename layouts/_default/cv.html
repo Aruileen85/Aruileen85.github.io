@@ -1,119 +1,149 @@
 {{ define "main" }}
-<div class="row bg-dark text-white shadow rounded-1 py-2"> <!-- CV Header -->
-	<div class="col-12 col-md-2 text-center p-3 p-md-4">
-		<img src="/img/photo.jpeg" class="img-fluid w-100 rounded-1">
+<div class="container mt-5 pt-5">
+	<div class="row bg-dark text-white shadow rounded-1 py-2"> <!-- CV Header -->
+		<div class="col-12 col-md-2 text-center p-3 p-md-4">
+			<img src="/img/avatar.jpg" class="img-fluid w-100 rounded-1">
+		</div>
+		<div class="col-12 col-md-8 text-center align-self-center">
+			<h2>{{ index .Site.Data.cv.about "name" }}</h2>
+			<p class="lead">{{ index .Site.Data.cv.about "desc" }}</p>
+			<p>{{ index .Site.Data.cv.about "location" }}</p>
+		</div>
+		<div class="col-12 col-md-2 text-center p-3 p-md-4">
+			<img src="/img/logo.svg" class="img-fluid w-100 d-none d-md-block">
+		</div>
 	</div>
-	<div class="col-12 col-md-8 text-center align-self-center">
-		<h2>{{ index .Site.Data.cv.about "name" }}</h2>
-		<p class="lead">{{ index .Site.Data.cv.about "desc" }}</p>
-		<p>{{ index .Site.Data.cv.about "location" }}</p>
-	</div>
-	<div class="col-12 col-md-2 text-center p-3 p-md-4">
-		<img src="/img/logo.svg" class="img-fluid w-100 d-none d-md-block">
-	</div>
-</div>
-<div class="row mt-5"> <!-- CV Body-->
-	<div class="col-xl-8"> <!-- Left Column -->
-		<h2 class="text-center text-lg-start">Mes Diplômes</h2>
-		<hr>
-		<div class="row"> <!-- Diplomas -->
-			{{ range .Site.Data.cv.diplomas }}
-			<div class="col-md-6 mb-4">
-				<div class="card mb-4 text-center h-100">
-          <div class="card-header"><h4>{{ .title }}</h4></div>
-					<img src="{{ .image }}" class="card-img-top w-25 align-self-center m-3" alt="{{ .title }}">
-					<div class="card-body">
-						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
-						<p class="card-text">{{ .description }}</p>
-						<p class="card-text text-muted">{{ .mention }}</p>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">{{ .dates }}</small>
+	<div class="row mt-5"> <!-- CV Body-->
+		<div class="col-xl-8"> <!-- Left Column -->
+			<h2 class="text-center text-lg-start">Mes Diplômes</h2>
+			<hr>
+			<div class="row"> <!-- Diplomas -->
+				{{ range .Site.Data.cv.diplomas }}
+				<div class="col-md-6 mb-4">
+					<div class="card mb-4 text-center h-100">
+						<div class="card-header">
+							<h4>{{ .title }}</h4>
+						</div>
+						<img src="{{ .image }}" class="card-img-top w-25 align-self-center m-3" alt="{{ .title }}">
+						<div class="card-body">
+							<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
+							<p class="card-text">{{ .description }}</p>
+							<p class="card-text text-muted">{{ .mention }}</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">{{ .dates }}</small>
+						</div>
 					</div>
 				</div>
-			</div>
-			{{ end }}
-		</div>
-
-		<h2 class="text-center text-lg-start">Mes Expériences Professionnelles</h2>
-		<hr>
-		<div class="row"> <!-- Professional Experiences -->
-			{{ range .Site.Data.cv.professional }}
-			<div class="col-lg-4 mb-4">
-				<div class="card text-center h-100">
-          <div class="card-header"><h4>{{.title }}</h4></div>
-					<img src="{{ .image }}" class="card-img-top align-self-center p-3" alt="{{ .location }}">
-					<div class="card-body">
-						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
-						<p class="card-text">{{ .description }}</p>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">{{ .dates }}</small>
-					</div>
-				</div>
-			</div>
-			{{ end }}
-		</div>
-
-		<h2 class="text-center text-lg-start">Mes Autres Expériences</h2>
-		<hr>
-		<div class="row"> <!-- Other Experiences -->
-			{{ range .Site.Data.cv.personnal }}
-			<div class="col-md-6 mb-4">
-				<div class="card mb-4 text-center h-100">
-          <div class="card-header"><h4>{{ .title }}</h4></div>
-					<div class="card-body">
-						<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
-						<p class="card-text">{{ .description}} </p>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">{{ .dates }}</small>
-					</div>
-				</div>
-			</div>
-			{{ end }}
-
-		</div>
-
-	</div>
-	<div class="col-xl-4"> <!-- Right Column (aside) -->
-		<h2 class="text-center text-lg-start">A propos de moi</h2>
-		<hr>
-		<p class="text-center text-lg-start">
-		  {{ index .Site.Data.cv.about "about" | markdownify }}
-		</p>
-		<h2 class="text-center text-lg-start">Qualités & Défauts</h2>
-		<hr>
-		<ul>
-			<li>Qualités :</li>
-			<ul>
-				{{ range .Site.Data.cv.lists.qualities }}
-				<li>{{ . }}</li>
 				{{ end }}
-			</ul>
-			<li>Défauts : </li>
-			<ul>
-				{{ range .Site.Data.cv.lists.defaults }}
-				<li>{{ . }}</li>
+			</div>
+
+			<h2 class="text-center text-lg-start">Mes Expériences Professionnelles</h2>
+			<hr>
+			<div class="row"> <!-- Professional Experiences -->
+				{{ range .Site.Data.cv.professional }}
+				<div class="col-lg-4 mb-4">
+					<div class="card text-center h-100">
+						<div class="card-header">
+							<h4>{{.title }}</h4>
+						</div>
+						<img src="{{ .image }}" class="card-img-top align-self-center p-3" alt="{{ .location }}">
+						<div class="card-body">
+							<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
+							<p class="card-text">{{ .description }}</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">{{ .dates }}</small>
+						</div>
+					</div>
+				</div>
 				{{ end }}
+			</div>
+
+			<h2 class="text-center text-lg-start">Mes Autres Expériences</h2>
+			<hr>
+			<div class="row"> <!-- Other Experiences -->
+				{{ range .Site.Data.cv.personnal }}
+				<div class="col-md-6 mb-4">
+					<div class="card mb-4 text-center h-100">
+						<div class="card-header">
+							<h4>{{ .title }}</h4>
+						</div>
+						<div class="card-body">
+							<h6 class="card-subtitle text-muted mb-2">{{ .location }}</h6>
+							<p class="card-text">{{ .description}} </p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">{{ .dates }}</small>
+						</div>
+					</div>
+				</div>
+				{{ end }}
+
+			</div>
+
+		</div>
+		<div class="col-xl-4"> <!-- Right Column (aside) -->
+			<h2 class="text-center text-lg-start">A propos de moi</h2>
+			<hr>
+			<p class="text-center text-lg-start">
+				{{ index .Site.Data.cv.about "about" | markdownify }}
+			</p>
+			<h2 class="text-center text-lg-start">Qualités & Défauts</h2>
+			<hr>
+			<ul>
+				<li>Qualités :</li>
+				<ul>
+					{{ range .Site.Data.cv.lists.qualities }}
+					<li>{{ . }}</li>
+					{{ end }}
+				</ul>
+				<li>Défauts : </li>
+				<ul>
+					{{ range .Site.Data.cv.lists.defaults }}
+					<li>{{ . }}</li>
+					{{ end }}
+				</ul>
 			</ul>
-		</ul>
-		<h2 class="text-center text-lg-start">Compétences</h2>
-		<hr>
-		<p class="text-center">
-		{{ range .Site.Data.cv.lists.competences }}
-    <img style="height: 64px" src="/icons/{{ . }}.png" alt="{{ . }}" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="{{ . }}">
-		{{ end}}
-		</p>
-		<h2 class="text-center text-lg-start">Loisirs</h2>
-		<hr>
-		<ul>
-			<li>Sport (Course à pieds, musculation)</li>
-			<li>Informatique</li>
-			<li>Formation Personnelle</li>
-			<li>Randonnée</li>
-			<li>Activités extérieures</li>
-		</ul>
+			<h2 class="text-center text-lg-start">Compétences</h2>
+			<hr>
+			<h3>Informatique</h3>
+			<p class="mb-3">
+				{{ range .Site.Data.cv.lists.it_competences }}
+				<figure class="figure mx-2 text-center">
+					<img height="64" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption text-center">{{ . }}</figcaption>
+				</figure>
+				{{ end}}
+			</p>
+			<h3>Autres</h3>
+			<p class="mb-3">
+				{{ range .Site.Data.cv.lists.others_competences }}
+				<figure class="figure mx-2 text-center">
+					<img height="64" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption text-center">{{ . }}</figcaption>
+				</figure>
+				{{ end}}
+			</p>
+			<h3>Apprentissages</h3>
+			<p class="mb-3">
+				{{ range .Site.Data.cv.lists.learning }}
+				<figure class="figure mx-2 text-center">
+					<img height="64" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption text-center">{{ . }}</figcaption>
+				</figure>
+				{{ end}}
+			</p>
+			<h2 class="text-center text-lg-start">Loisirs</h2>
+			<hr>
+			<ul>
+				<li>Sport (Course à pieds, musculation)</li>
+				<li>Informatique</li>
+				<li>Formation Personnelle</li>
+				<li>Randonnée</li>
+				<li>Activités extérieures</li>
+			</ul>
+		</div>
 	</div>
 </div>
 {{ end }}

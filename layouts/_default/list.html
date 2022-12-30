@@ -1,20 +1,26 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Paginator.Pages.ByPublishDate.Reverse }}
-<div class="card mb-3">
-  <div class="card-body"> 
-    <h4 class="card-title"> <a href="{{ .RelPermalink }}" class="text-reset text-decoration-none">{{ .Title }}</a></h4>
-    <h6 class="card-subtitle text-muted mb-2"> - Le {{ partial "date.html" . }} </h6>
-    <p class="card-text">
-      {{ .Summary }}&nbsp;&nbsp;<a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Lire la suite...</a>
-    </p>
-  </div>
-  <div class="card-footer">
-    {{ partial "metadata.html" . }}
-  </div>
+<div class="container mt-5 pt-5">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title"> <a href="{{ .RelPermalink }}" class="text-reset text-decoration-none">{{ .Title
+                    }}</a>
+            </h4>
+            <h6 class="card-subtitle text-muted mb-2"> - Le {{ partial "date.html" . }} </h6>
+            <p class="card-text">
+                {{ .Summary }}&nbsp;&nbsp;<a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Lire la
+                    suite...</a>
+            </p>
+        </div>
+        <div class="card-footer">
+            {{ partial "metadata.html" . }}
+        </div>
+    </div>
+    {{ end }}
+    <div class="text-center ">
+        {{ template "_internal/pagination.html" . }}
+    </div>
 </div>
-{{ end }}
-  <div class="text-center ">
-    {{ template "_internal/pagination.html" . }}
-  </div>
 {{ end }}

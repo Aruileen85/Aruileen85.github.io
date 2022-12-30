@@ -1,0 +1,173 @@
+{{ define "main" }}
+<div class="container-fluid">
+	<div class="row align-items-center bg-secondary" id="presentation" style="min-height:100vh">
+		<div class="col-md-6 mx-auto text-center">
+			<p><img alt="Aurélien S." class="rounded-3 shadow" src="/img/avatar.jpg" style="width:150px"></p>
+			<h2 class="display-1 fw-bolder">{{ index .Site.Data.cv.about "name" }}</h2>
+			<p class="fs-1 fst-italic mb-5">
+				{{ index .Site.Data.cv.about "desc" }}
+			</p>
+			<p class='badge rounded-pill text-bg-{{ index .Site.Data.cv.about "status_color" }} fs-6 mb-5 shadow'>{{ index .Site.Data.cv.about "status" }}</p>
+			<p class="text-muted fw-bold">La version simplifiée du CV est disponible <a href="/cv_min" class="text-reset">à cette adresse</a></p>
+			<p class="mt-5"><img alt="arrow-down" src="/icons/d-arrow.png" style="width:30px"></p>
+		</div>
+	</div>
+
+	<!-- Diplomes -->
+	<div class="row py-5 px-md-5" id="diplomes" style="min-height:100vh">
+		<div class="mx-auto text-center">
+			<h2 class="display-3 fw-bolder">Mes
+				Diplômes</h2>
+			<div class="row mt-md-5 pt-5 align-items-center mx-auto g-5">
+				{{ range .Site.Data.cv.diplomas }}
+				<div class="col-md-1 mx-auto">
+					<img class="" height="100" src="{{ .image }}" alt="{{ .title }}">
+				</div>
+				<div class="col-md-5 text-md-start">
+					<h3 class="mb-0">{{ .title }}</h3>
+					<p class="text-muted mt-0">{{ .location }}</p>
+					<p>{{ .description }}</p>
+					<p class="text-muted">{{ .dates }}</p>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+
+	<!-- Exp. Pro. -->
+	<div class="row bg-secondary py-5 px-md-5" id="pro" style="min-height:100vh">
+		<div class="row mx-auto text-center">
+			<div class="col">
+				<h2 class="display-3 fw-bolder">Mes Expériences Professionnelles</h2>
+			</div>
+		</div>
+		<div class="row mx-auto text-center">
+			<div class="col mt-5 align-items-center mx-auto">
+				<div class="carousel carousel-dark slide carousel-fade" data-bs-ride="false" id="carousel_pro">
+					<!-- <div class="carousel-indicators">
+						<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+							data-bs-target="#carousel_pro" type="button"></button>
+						<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel_pro"
+							type="button"></button>
+							<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel_pro"
+							type="button"></button>
+							<button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carousel_pro"
+							type="button"></button>
+					</div> -->
+					<div class="carousel-inner">
+						{{ $i := 0}}
+						{{ range .Site.Data.cv.professional }}
+						<div class="carousel-item {{ if (eq $i 0) }}active{{ end }}">
+							<div class="card w-75 mx-auto">
+								<img alt="SODEM Manutention, Vendée (85)" class="card-img-top align-self-center p-3" height="200" src="{{ .image }}">
+								<div class="card-body">
+									<h5 class="card-title"><span class="fw-bold">{{.title }}</span> chez <span class="fst-italic">{{ .location }}</span></h5>
+									<p class="card-text">
+										{{ .description }}
+									</p>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted">{{ .dates }}</small>
+								</div>
+							</div>
+						</div>
+						{{ $i = add $i 1}}
+						{{ end }}
+					</div>
+					<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel_pro" type="button">
+						<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel_pro" type="button">
+						<span aria-hidden="true" class="carousel-control-next-icon"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Exp. Perso. -->
+	<div class="row py-5" id="perso" style="min-height:100vh">
+		<div class="row mx-auto text-center px-5 align-self-center">
+			<div class="col">
+				<h2 class="display-3 fw-bolder">Mes Autres Expériences</h2>
+			</div>
+		</div>
+		{{ $i := 0}}
+		{{ range .Site.Data.cv.personnal }}
+		<div class="row mx-auto text-center px-5 align-self-center">
+			<div class="col-md-6 {{ if (eq (mod $i 2) 0) }}me-auto{{ else }}ms-auto{{end}} shadow rounded-5 p-3 text-light bg-dark mb-3">
+				<h3><span class="fw-bold">{{ .title }}</span> pour <span class="fst-italic">{{ .location }}</span></h3>
+				<p>{{ .description}}</p>
+				<p class="text-muted ">{{ .dates }}</p>
+			</div>
+		</div>
+		{{ $i = add $i 1}}
+		{{ end }}
+	</div>
+
+	<!-- Compéteces -->
+	<div class="row align-items-center bg-secondary py-5 px-md-5" id="competences" style="min-height:100vh">
+		<div class="row mx-auto text-center">
+			<div class="col">
+				<h2 class="display-3 fw-bolder">Bilan de Compétences</h2>
+			</div>
+		</div>
+		<div class="row mx-auto text-center mt-0 g-3">
+			<div class="col-md-4 mx-auto">
+				<h3 class="mb-5">Informatique</h3>
+				{{ range .Site.Data.cv.lists.it_competences }}
+				<figure class="figure mx-2">
+					<img height="90" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption">{{ . }}</figcaption>
+				</figure>
+				{{end}}
+
+			</div>
+			<div class="col-md-4 mx-auto">
+				<h3 class="mb-5">Autres Compétences</h3>
+				{{ range .Site.Data.cv.lists.others_competences }}
+				<figure class="figure mx-2">
+					<img height="90" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption">{{ . }}</figcaption>
+				</figure>
+				{{end}}
+			</div>
+			<div class="col-md-4 mx-auto">
+				<h3 class="mb-5">Apprentissages en cours</h3>
+				{{ range .Site.Data.cv.lists.learning }}
+				<figure class="figure mx-2">
+					<img height="90" src="/icons/{{ . }}.png" data-bs-toggle="collapse" data-bs-placement="top" data-bs-title="{{ . }}">
+					<figcaption class="figure-caption">{{ . }}</figcaption>
+				</figure>
+				{{end}}
+
+			</div>
+		</div>
+	</div>
+
+	<!-- About Me section -->
+	<div class="row align-items-center py-5 px-md-5" id="about" style="min-height:100vh">
+		<div class="col-md-8 mx-auto text-start px-5">
+			<h2 class="display-3 fw-bolder">A propos de moi</h2>
+			<p class="fs-5">L'informatique… Tombé dans cette passion dès mon plus jeune âge (quand vers 11 ans mes
+				camarades découvraient les jeux vidéos et internet, je développais mon premier site web en HTML4 et PHP
+				!), ces 20 dernières années auront été chargées d'expériences variées avec le numérique… Linux, Mac OS,
+				Windows sous toutes ses formes, j'ai appris à connaître et à bien maîtriser tous ces systèmes
+				d'exploitation. Féru de code, j'ai appris les langages Python, html5, CSS3, Bootstrap, PHP, LabVIEW et
+				possède quelques bases en java, C++. Technicien Motoriste de formation et de carrière, j'ai travaillé au
+				centre technique de Renault Lardy, puis à l'Ecole Centrale de Nantes sur banc d'essais moteur.
+				L'informatique ayant une place prépondérante dans le monde de la recherche et des essais, j'ai pu mettre
+				à profit ma passion dans le cadre professionnel en développant des applications de pilotage/acquisition,
+				mais aussi des scripts pour automatiser certaines tâches (comme automatiser l'envoi de mail, les
+				traitement des résultats d'essais…).Travaillant aujourd'hui comme mécanicien suit à la crise financière
+				ayant conduit les entreprises du monde de l'automobile à revoir à la baisse leurs projets de recherche,
+				je souhaite reprendre une carrière dans le monde de l'informatique.</p>
+		</div>
+		<div class="col-md-4 mx-auto text-center px-5">
+			<p><img alt="illustration" class="img-fluid rounded shadow-lg" src="/img/background-dev.jpg"></p>
+		</div>
+	</div>
+</div>
+{{ end }}
