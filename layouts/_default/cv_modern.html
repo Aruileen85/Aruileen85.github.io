@@ -97,8 +97,9 @@
 		{{ $i := 0}}
 		{{ range .Site.Data.cv.personnal }}
 		<div class="row mx-auto text-center px-5 align-self-center">
-			<div class="col-md-6 {{ if (eq (mod $i 2) 0) }}me-auto{{ else }}ms-auto{{end}} shadow rounded-5 p-3 text-light bg-dark mb-3">
+			<div class="col-md-6 {{ if (eq (mod $i 2) 0) }}me-auto{{ else }}ms-auto{{end}} shadow rounded-3 p-3 text-light bg-dark bg-gradient">
 				<h3><span class="fw-bold">{{ .title }}</span> pour <span class="fst-italic">{{ .location }}</span></h3>
+				<p><img src="{{ .image }}" class="card-img-top w-25 align-self-center m-3" alt="{{ .title }}"></p>
 				<p>{{ .description}}</p>
 				<p class="text-muted ">{{ .dates }}</p>
 			</div>
